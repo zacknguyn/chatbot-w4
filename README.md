@@ -1,5 +1,56 @@
 # React + TypeScript + Vite
 
+## Getting Started
+
+To get a local copy up and running follow these steps.
+
+### Prerequisites
+
+- npm or yarn or pnpm
+- (Optional) Any required API keys for the chatbot functionality (see .env.example if available)
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/zacknguyn/chatbot-w4.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+   or
+   ```sh
+   yarn install
+   ```
+   or
+   ```sh
+   pnpm install
+   ```
+
+### Usage
+
+Start the development server:
+   ```sh
+   npm run dev
+   ```
+   or
+   ```sh
+   yarn dev
+   ```
+   or
+   ```sh
+   pnpm dev
+   ```
+
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### Environment Variables
+
+If the application requires environment variables, create a `.env` file in the root directory and add the necessary variables. Note that `.env` is ignored by Git to keep your secrets safe.
+
+## React + TypeScript + Vite
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
