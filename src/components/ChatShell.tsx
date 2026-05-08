@@ -365,16 +365,15 @@ export default function ChatShell({ level, onLevelChange, sessionId, fontFamily,
                   fontFamily: `"${fontFamily}", ${fontFamily === 'Lora' || fontFamily === 'Source Serif 4' ? 'serif' : 'sans-serif'}`,
                   boxShadow: isUser ? '0 1px 4px rgba(204,120,92,0.2)' : '0 1px 3px rgba(20,20,19,0.05)',
                 }}>
-                  {msg.sender === 'loading' ? (
-                    <span role="status" aria-label="Loading response" style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-                      <span style={{ display: 'flex', gap: 4 }}>
-                        {[0, 0.18, 0.36].map((delay, i) => (
-                          <span key={i} style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--primary)', display: 'inline-block', animation: `pulse 1s ${delay}s infinite alternate` }} />
-                        ))}
-                      </span>
-                      <span style={{ fontSize: 12, color: 'var(--text-secondary)', fontStyle: 'italic' }}>{loadingLabel}</span>
-                    </span>
-                  ) : (
+          {msg.sender === 'loading' ? (
+            <span role="status" aria-label="Loading response" style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+              <span style={{ display: 'flex', gap: 4 }}>
+                {[0, 0.18, 0.36].map((delay, i) => (
+                  <span key={i} style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--primary)', display: 'inline-block', animation: `pulse 1s ${delay}s infinite alternate` }} />
+                ))}
+              </span>
+            </span>
+          ) : (
                     <>
                       <span dangerouslySetInnerHTML={{ __html: formatText(msg.text ?? '') }} />
                       {msg.toolsUsed && msg.toolsUsed.length > 0 && <InlineTools tools={msg.toolsUsed} />}
